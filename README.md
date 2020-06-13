@@ -6,13 +6,13 @@ CentOS/Redhat (YUM repo for EPEL)
 yum --enablerepo=extras install epel-release
 
 rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+
 yum install https://www.elrepo.org/elrepo-release-8.el8.elrepo.noarch.rpm (external link)
 
 
 Jenkins installation
 
-sudo wget -O /etc/yum.repos.d/jenkins.repo \
-    https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo wget -O /etc/yum.repos.d/jenkins.repo  https://pkg.jenkins.io/redhat-stable/jenkins.repo
     
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
 
@@ -28,9 +28,7 @@ Executed below on Docker server 192.168.43.200
 
 sudo yum install -y yum-utils
 
-yum-config-manager \
-    --add-repo \
-    https://download.docker.com/linux/centos/docker-ce.repo
+yum-config-manager  --add-repo  https://download.docker.com/linux/centos/docker-ce.repo
     
  yum install docker-ce docker-ce-cli containerd.io --nobest
  
@@ -51,9 +49,7 @@ yum-config-manager \
   
   yum install -y yum-utils
   
-  yum-config-manager \
-    --add-repo \
-    https://download.docker.com/linux/centos/docker-ce.repo
+  yum-config-manager --add-repo  https://download.docker.com/linux/centos/docker-ce.repo
     
  yum install docker-ce-cli 
  
